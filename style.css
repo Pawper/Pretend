@@ -63,13 +63,19 @@ button {
   border: 0.1em solid white;
   border-radius: 15px;
   width: 1fr;
-  height: 5em;
   align-items: center;
   text-transform: uppercase;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 800;
   color: white;
   font-size: calc(0.4em + 1vw);
+}
+
+i {
+  font-size: calc(1em + 3vw);
+  padding-top: 0.25vw;
+  padding-bottom: 10px;
+  display: block;
 }
 
 main {
