@@ -67,7 +67,7 @@ header {
 h1 {
   text-transform: uppercase;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: calc(1em + 5vmin);
   letter-spacing: 0.4em;
   line-height: 0;
