@@ -1,0 +1,88 @@
+:root {
+  --universal-background-color: rgba( 0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: white;
+  background-image: url("sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  width: 800px;
+  max-width: 90%;
+  margin: 50px;
+  display: grid;
+  gap: 15px;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "hd"
+  "nav"
+  "mn";
+}
+
+header {
+  grid-area: hd;
+  padding: 15px;
+  background-color: var(--universal-background-color);
+ -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-style: 100;
+  font-size: calc(1em + 5vmin);
+  letter-spacing: 0.4em;
+  line-height: 0;
+  margin-right: -0.4em;
+}
+
+nav {
+  grid-area: nav;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(10vmin,1fr));
+}
+button {
+  padding: 15px 0;
+  background-color: var(--universal-background-color); -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 0.1em solid white;
+  border-radius: 15px;
+  width: 1fr;
+  height: 5em;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: calc(0.4em + 1vw);
+}
+
+main {
+  grid-area: mn;
+  padding: 15px;
+  background-color: var(--universal-background-color); -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+footer {
+  grid-area: ft;
+  padding: 15px;
+  background-color: var(--universal-background-color); -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);  border-radius: 15px;
+}
