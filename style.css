@@ -109,6 +109,7 @@ button {
   color: white;
   font-size: calc(0.4em + 1vw);
   cursor: pointer;
+  outline: none;
 }
 @media (max-width: 640px) {
   button {
@@ -150,4 +151,21 @@ footer {
   padding: 15px;
   background-color: var(--universal-background-color); -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);  border-radius: 15px;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:active {
+  transform: scale(1.1);
 }
