@@ -38,14 +38,17 @@ body {
 @media (min-width: 415px) {
   .floating-ui-space {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
 
 #title-strip {
-  padding: calc(2vmin + 12px);
-  margin-bottom: 1vmin;
+  min-height: 25px;
+  padding-bottom: 28px;
+  padding-top: 25px;
+  margin-bottom: 1vw;
   background-color: var(--universal-background-color);
  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -54,19 +57,38 @@ body {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 500px) {
+@media (min-width: 415px) {
   #title-strip {
-    margin-bottom: 2vmin;
-    max-height: 6vh;
+    padding-bottom: calc(28px + 28px * (100vw - 415px) / 415px);
+    padding-top: calc(25px + 25px * (100vw - 415px) / 415px);
   }
 }
+@media (min-width: 845px) {
+  #title-strip {
+    padding-bottom: calc(10vw - 6.5vw);
+    padding-top: calc(10vw - 6.5vw);
+  }
+}
+
 #title-strip h1 {
   text-transform: uppercase;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 400;
   letter-spacing: 0.4em;
   margin-right: -0.4em;
-  font-size: calc(1em + 5vmin);
+  display: block;
+  line-height: 0;
+  font-size: 40px;
+}
+@media (min-width: 415px) {
+  #title-strip h1 {
+    font-size: calc(40px + 40px * (100vw - 415px) / 415px);
+  }
+}
+@media (min-width: 845px) {
+  #title-strip h1 {
+    font-size: 4.5vw;
+  }
 }
 
 #main-menu {
@@ -74,6 +96,7 @@ body {
   grid-template-columns: auto auto auto auto auto;
   justify-items: center;
   gap: 1vw;
+  padding-bottom: 1vw;
 }
 @media (min-width: 415px) {
   #main-menu {
@@ -103,11 +126,15 @@ body {
   font-size: 12.5px;
   color: white;
   cursor: pointer;
-  transition-duration: 0.3s;
   outline: none;
+  opacity: 0.5;
+  transition-duration: 300ms;
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
 }
 #main-menu button:focus, #main-menu button:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  opacity: 1;
 }
 
 @media (min-width: 415px) {
@@ -144,6 +171,19 @@ body {
   }
 }
 
+main {
+  padding: calc(2vmin + 12px);
+  margin-bottom: 1vw;
+  background-color: var(--universal-background-color);
+ -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 footer {
   justify-self: center;
   margin: 10px;
@@ -157,9 +197,11 @@ footer {
   display: block;
   margin: calc(0.5em + 1vw);
   color: white;
-  opacity: 0.3;
   outline: none;
-  transition-duration: 0.3s;
+  opacity: 0.3;
+  transition-duration: 250ms;
+  transition-property: transform, opacity;
+  transition-timing-function: ease-out;
 }
 #footer-menu a:focus, #footer-menu a:hover {
   transform: scale(1.1);
