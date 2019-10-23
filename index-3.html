@@ -7,7 +7,7 @@
   <title>Pretend</title>
   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400&display=swap&effect=anaglyph" rel="stylesheet">
   <script src="https://kit.fontawesome.com/edb600a6e3.js"></script>
-  <link rel="stylesheet" type="text/css" href="style-2.css">
+  <link rel="stylesheet" type="text/css" href="style-3.css">
 </head>
 <body>
   <div class="window-grid">
@@ -15,42 +15,43 @@
 
     </div>
     <div class="floating-ui-space">
-      <header>
-        <div id="title-strip" class="font-effect-anaglyph">
+      <div>
+        <header id="title-strip" class="font-effect-anaglyph noSelect bottom-z-index">
           <h1>Pretend</h1>
-        </div>
+        </header>
         <nav>
-          <ul id="main-menu">
-            <li><button class="font-effect-anaglyph">
+          <ul id="main-menu" class="top-z-index">
+            <li><button class="font-effect-anaglyph noSelect">
               <i class="fas fa-dice"></i>
               Play
             </button></li>
-            <li><button class="font-effect-anaglyph">
+            <li><button class="font-effect-anaglyph noSelect">
               <i class="fas fa-clock"></i>
               Synchronize
             </button></li>
-            <li><button class="font-effect-anaglyph">
+            <li><button class="font-effect-anaglyph noSelect">
               <i class="fas fa-book-open"></i>
               Backdrops
             </button></li>
-            <li><button class="font-effect-anaglyph">
+            <li><button class="font-effect-anaglyph noSelect">
               <i class="fas fa-address-card"></i>
               Keeper
             </button></li>
-            <li><button class="font-effect-anaglyph">
+            <li><button class="font-effect-anaglyph noSelect">
               <i class="fas fa-cog"></i>
               Settings
             </button></li>
           </ul>
         </nav>
-      </header>
-      <main>
-      </main>
+        <main class="font-effect-anaglyph bottom-z-index">
+          <p>Testing Z-index / Chrome mobile viewport height fix using "stretch"</p>
+        </main>
+      </div>
     </div>
-    <footer>
+    <footer class="top-z-index">
       <nav id="footer-menu">
         <ul>
-          <li class="font-effect-anaglyph">
+          <li class="font-effect-anaglyph noSelect">
             <a href="https://github.com/Pawper/Pretend"  aria-label="Github">
                 <i class="fab fa-github"></i>
             </a>

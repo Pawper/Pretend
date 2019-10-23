@@ -1,7 +1,3 @@
-:root {
-  --universal-background-color: rgba( 0, 0, 0, 0.5);
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -10,6 +6,85 @@
   text-decoration: none;
 }
 
+/* RESPONSIVENESS */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+}
+body * {
+  width: 100%;
+  /* border: white 1px solid; */
+}
+#floating-ui-space {
+  width: auto;
+  padding: 0.75vw;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Really wish there was flex gap */
+  gap: 1.5vw;
+}
+#title-strip {
+  flex: 1;
+  display: flex;
+  width: auto;
+  align-items: center;
+  /* Really wish there was flex gap */
+  margin: 0.75vw;
+}
+#title-strip h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+#main-menu {
+  flex: 3 1;
+  /* Really wish there was flex gap */
+  margin: 0.75vw;
+}
+#main-menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5vw;
+}
+#main-menu i {
+  display: block;
+  line-height: 0;
+  padding-bottom: 31px;
+}
+#content {
+  width: auto;
+  margin-left: 0.75vw;
+  margin-right: 0.75vw;
+  margin-top: 0.75vw;
+  padding: 1.5vw;
+}
+#footer-menu * {
+  width: auto;
+}
+#footer-menu ul {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+@media (min-width: 500px) {
+  #footer-menu ul {
+    justify-content: flex-end;
+  }
+}
+
+/* INTERACTIVITY - INCLUDES FOCUS STYLING */
 .noSelect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -19,216 +94,69 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
-
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background-image: url("sunset.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-.window-grid {
-  width: 100vw;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-@media (min-width: 415px) {
-  .top-banner {
-    height: 14vmin;
-  }
-}
-
-@media (min-width: 415px) {
-  .floating-ui-space {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-#title-strip {
-  min-height: 25px;
-  padding-bottom: 28px;
-  padding-top: 25px;
-  margin-bottom: 1vw;
-  background-color: var(--universal-background-color);
- -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 415px) {
-  #title-strip {
-    padding-bottom: calc(28px + 28px * (100vw - 415px) / 415px);
-    padding-top: calc(25px + 25px * (100vw - 415px) / 415px);
-  }
-}
-@media (min-width: 845px) {
-  #title-strip {
-    padding-bottom: calc(10vw - 6.5vw);
-    padding-top: calc(10vw - 6.5vw);
-  }
-}
-
-#title-strip h1 {
-  text-transform: uppercase;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.4em;
-  margin-right: -0.4em;
-  display: block;
-  line-height: 0;
-  font-size: 40px;
-}
-@media (min-width: 415px) {
-  #title-strip h1 {
-    font-size: calc(40px + 40px * (100vw - 415px) / 415px);
-  }
-}
-@media (min-width: 845px) {
-  #title-strip h1 {
-    font-size: 4.5vw;
-  }
-}
-
-#main-menu {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  justify-items: center;
-  gap: 1vw;
-  padding-bottom: 1vw;
-}
-@media (min-width: 415px) {
-  #main-menu {
-    margin: 0;
-  }
-}
-
-#main-menu button {
-  width: 10vw;
-  min-width: 76px;
-  min-height: 79px;
-  display: grid;
-  grid-template-rows: auto auto;
-  padding-bottom: 5.75vw;
-  padding-top: 30px;
-  height: 0;
-  background-color: var(--universal-background-color); 
-  border: 0.1em solid white;
-  border-radius: 15px;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  align-items: center;
-  text-transform: uppercase;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 400;
-  line-height: 0;
-  font-size: 12.5px;
-  color: white;
+button, a {
   cursor: pointer;
   outline: none;
-  opacity: 0.5;
-  transition-duration: 300ms;
+}
+#main-menu button, #footer-menu a {
+  transition-duration: 250ms;
   transition-property: transform, opacity;
   transition-timing-function: ease-out;
 }
 #main-menu button:focus, #main-menu button:hover {
   transform: scale(1.15);
-  opacity: 1;
-}
-
-@media (min-width: 415px) {
-  #main-menu button {
-    width: 10vw;
-    padding-bottom: 5.75vw;
-    padding-top: calc(30px + 30px * (100vw - 415px) / 415px);
-    font-size: calc(12.5px + 12.5px * (100vw - 415px) / 415px);
-  }
-}
-@media (min-width: 845px) {
-  #main-menu button {
-    padding-top: calc(10vw - 6.5vw);
-    font-size: 1.5vw;
-  }
-}
-
-#main-menu i {
-  display: block;
-  line-height: 0;
-  font-size: 36px;
-  padding-bottom: 31px;
-}
-@media (min-width: 415px) {
-  #main-menu i {
-    font-size: calc(36px + 36px * (100vw - 415px) / 415px);
-    padding-bottom: calc(31px + 31px * (100vw - 415px) / 415px);
-  }
-}
-@media (min-width: 845px) {
-  #main-menu i {
-    font-size: 4.5vw;
-    padding-bottom: 3.75vw;
-  }
-}
-
-main {
-  padding: calc(2vmin + 12px);
-  margin-bottom: 1vw;
-  background-color: var(--universal-background-color);
- -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-footer {
-  justify-self: center;
-  margin: 10px;
-}
-@media (min-width: 415px) {
-  footer {
-    justify-self: right;
-  }
 }
 #footer-menu a {
-  display: block;
-  margin: calc(0.5em + 1vw);
-  color: white;
-  outline: none;
   opacity: 0.3;
-  transition-duration: 250ms;
-  transition-property: transform, opacity;
-  transition-timing-function: ease-out;
 }
 #footer-menu a:focus, #footer-menu a:hover {
   transform: scale(1.1);
   opacity: 1
 }
 
-#footer-menu i {
+/* STYLE */
+body {
+  background-image: url("sunset.jpg");
+}
+#title-strip {
+  background-color: rgba( 0, 0, 0, 0.5);
+  color: white;
+ -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  
+}
+#title-strip h1 {
+  text-transform: uppercase;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  padding-left: 0.4em;
+  line-height: 0;
+}
+#main-menu button {
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: rgba( 255, 255, 255, 0.5);
+  color: white;
+ -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: none;
+}
+#main-menu i {
+  font-size: 36px;
+  color: white;
+}
+#content {
+  background-color: rgba( 0, 0, 0, 0.5);
+ -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: white;
+}
+#footer-menu a {
   display: block;
+  color: white;
+}
+#footer-menu i {
   font-size: 50px;
-}
-@media (min-width: 415px) {
-  #footer-menu i {
-    font-size: calc(50px + 50px * (100vw - 415px) / 415px);
-  }
-}
-@media (min-width: 845px) {
-  #footer-menu i {
-    font-size: 4.5vw;
-  }
 }
