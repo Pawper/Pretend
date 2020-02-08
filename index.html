@@ -5,64 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pretend</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400&display=swap&effect=anaglyph" rel="stylesheet">
   <script src="https://kit.fontawesome.com/edb600a6e3.js"></script>
 </head>
 <body>
-  <div id="top-banner"></div>
-  <main id="floating-ui-space">
-    <header>
-      <div id="title-strip">
-        <h1 class="font-effect-anaglyph">PRETEND</h1>
+  <div class="l-modal-ui">
+  </div>
+  <div class="l-viewport-ui">
+    <header class="c-banner">
+      <div class="c-banner__content">
+        <span class="c-responsive-text c-banner__text">Pretend is currently under development and is subject to change.</span>
       </div>
-      <nav id="main-menu" class="font-effect-anaglyph">
-        <ul>
-          <li>
-            <button class="noSelect">
-              <i class="fas fa-dice"></i>
-              Play
-            </button>
-          </li>
-          <li>
-            <button class="noSelect">
-              <i class="fas fa-clock"></i>
-              Synchronize
-            </button>
-          </li>
-          <li>
-            <button class="noSelect">
-              <i class="fas fa-book-open"></i>
-              Backdrops
-            </button>
-          </li>
-          <li>
-            <button class="noSelect">
-              <i class="fas fa-address-card"></i>
-              Keeper
-            </button>
-          </li>
-          <li>
-            <button class="noSelect">
-              <i class="fas fa-cog"></i>
-              Settings
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <button class="c-button c-button--close c-responsive-text"></button>
     </header>
-    <main id="content">MAIN</main>
-  </main>
-  <footer>
-    <nav id="footer-menu">
-      <ul>
-        <li class="noSelect">
-          <a href="https://github.com/Pawper/Pretend"  aria-label="Github">
-              <i class="fab fa-github"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
+    <main class="l-main-ui">
+      <header class="l-main-ui__header">
+        <h1 class="l-main-ui__title font-effect-anaglyph">Pretend</h1>
+        <nav>
+          <ul class="l-main-ui__nav">
+            <li class="l-main-ui__nav-item"><button class="l-main-ui__nav-item-button c-button c-button--dark c-responsive-text">Play</button></li>
+            <li class="l-main-ui__nav-item"><button class="l-main-ui__nav-item-button c-button c-button--dark c-responsive-text">Synchronize</button></li>
+            <li class="l-main-ui__nav-item"><button class="l-main-ui__nav-item-button c-button c-button--dark c-responsive-text">Backdrops</button></li>
+            <li class="l-main-ui__nav-item"><button class="l-main-ui__nav-item-button c-button c-button--dark c-responsive-text">Keeper</button></li>
+            <li class="l-main-ui__nav-item"><button class="l-main-ui__nav-item-button c-button c-button--dark c-responsive-text">Settings</button></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- <main class="l-section-ui">
+        <p class="c-responsive-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus rerum fugit, nulla perferendis beatae magni obcaecati dolorem enim omnis sequi in quo exercitationem fuga odio, ut alias tenetur vero qui?</p>
+        <button class="c-responsive-text c-button c-button--light">Button</button>
+      </main> -->
+    </main>
+    <!-- <footer class="c-banner">
+      <div class="c-banner__content">
+        <span class="c-responsive-text c-banner__text">Viewport Footer</span>
+        <nav class="c-banner__nav">
+          <button class="c-responsive-text c-button c-button--light">Button</button>
+          <button class="c-responsive-text c-button c-button--light">Button</button>
+        </nav>
+      </div>
+      <button class="c-responsive-text c-button c-button--close"></button>
+    </footer> -->
+  </div>
 </body>
 </html>
