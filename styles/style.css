@@ -98,25 +98,25 @@ body {
               0px 5px 10px var(--light) inset;
 }
 
+.c-close-checkbox {
+  display: none;
+}
+.c-close-checkbox:checked + .c-banner {
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+}
 .c-button--close {
   padding: 0;
   width: calc(5.5vmin + 1rem);
   height: calc(5.5vmin + 1rem);
   justify-content: center;
+  align-items: center;
   background: none;
   backdrop-filter: none;
   grid-area: 1/-1/-1/-1;
   border: 0;
   border-radius: 50%;
-  position: relative;
-}
-.c-button--close::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: "\00274C\00FE0E";
-  text-shadow: var(--outline--dark);
 }
 .c-button--close:hover,
 .c-button--close:focus {
@@ -166,6 +166,7 @@ body {
   border: none;
   text-align: center;
   padding: 1rem calc(1vmin + 1rem);
+  position: relative;
 }
 .c-banner span::selection {
   color: black;
@@ -241,7 +242,7 @@ footer.c-banner {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 0;
   z-index: 2;
   position: relative;
@@ -251,7 +252,7 @@ footer.c-banner {
   display: visible;
   position: absolute;
   top: -2px;
-  left: 1rem;
+  left: 1.25rem;
 }
 
 @media screen and (min-width: 415px) {
