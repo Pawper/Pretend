@@ -167,6 +167,16 @@ body {
   text-align: center;
   padding: 1rem calc(1vmin + 1rem);
 }
+.c-banner span::selection {
+  color: black;
+  text-shadow: var(--outline--light);
+  background: var(--light);
+}
+.c-banner span::-moz-selection {
+  color: black;
+  text-shadow: var(--outline--light);
+  background: var(--light);
+}
 footer.c-banner {
   position: absolute;
   bottom: 0;
@@ -384,6 +394,16 @@ footer.c-banner {
   place-items: center;
   text-shadow: var(--outline--dark);
   width: 100%;
+}
+.l-section-ui p::selection {
+  color: black;
+  text-shadow: var(--outline--light);
+  background: var(--light);
+}
+.l-section-ui p::-moz-selection {
+  color: black;
+  text-shadow: var(--outline--light);
+  background: var(--light);
 }
 @media screen and (min-width: 415px) {
   .l-section-ui {
