@@ -30,6 +30,14 @@
   0 -1px 0px var(--lighter),
   -1px -1px 0px var(--lighter),
   -1px 1px 0px var(--lighter),
+  1px -1px 0px var(--lighter),
+  1px 0  0px var(--lighter),
+  0 1px 0px var(--lighter),
+  1px 1px 0px var(--lighter),
+  -1px 0 0px var(--lighter),
+  0 -1px 0px var(--lighter),
+  -1px -1px 0px var(--lighter),
+  -1px 1px 0px var(--lighter),
   1px -1px 0px var(--lighter);
   font-size: 10px;
   font-family: 'Barlow Semi Condensed', sans-serif;
@@ -193,11 +201,6 @@ body {
   grid-auto-flow: row;
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
-}
-@media screen and (min-width: 415px) {
-  .l-viewport-ui {
-    gap: calc(1vmin + 1rem);
-  }
 }
 
 /* Viewport UI - Banners */
