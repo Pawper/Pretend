@@ -103,6 +103,7 @@ body {
   transition-property: transform, border, box-shadow;
   transition-timing-function: ease-out;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
   transform: translateZ(0);
 }
@@ -174,6 +175,7 @@ body {
     transition-property: padding, transform, border, box-shadow, translate, backdrop-filter;
     transition-timing-function: ease-out;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
     transform: translateZ(0);
     text-decoration: none;
